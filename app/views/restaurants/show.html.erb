@@ -16,7 +16,13 @@
       </dd>
 
       <dt>Neighborhood</dt>
-      <dd><%= @restaurant.neighborhood_id %></dd>
+      <dd>
+        <% if @restaurant.neighborhood.present? %>
+          <a href="/neighborhoods/<%= @restaurant.neighborhood_id %>">
+            <%= @restaurant.neighborhood.neighborhood_name %>
+          </a>
+        <% end %>
+      </dd>
 
     </dl>
 
