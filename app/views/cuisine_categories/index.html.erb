@@ -1,0 +1,28 @@
+<div class="page-header">
+  <h1>
+    Cuisine categories
+    <a href="/cuisine_categories/new" class="btn btn-lg btn-success">New Cuisine category</a>
+  </h1>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-striped table-hover">
+      <tr>
+        <th>Cuisine</th>
+        <th>Actions</th>
+      </tr>
+
+      <% @cuisine_categories.each do |cuisine_category| %>
+      <tr>
+        <td><%= cuisine_category.cuisine %></td>
+        <td>
+          <a href="/cuisine_categories/<%= cuisine_category.id %>" class="btn btn-primary">Show</a>
+          <a href="/cuisine_categories/<%= cuisine_category.id %>/edit" class="btn btn-warning">Edit</a>
+          <a href="/delete_cuisine_category/<%= cuisine_category.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

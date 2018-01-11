@@ -1,4 +1,21 @@
 Rails.application.routes.draw do
+  # Routes for the Cuisine_category resource:
+  # CREATE
+  get "/cuisine_categories/new", :controller => "cuisine_categories", :action => "new"
+  post "/create_cuisine_category", :controller => "cuisine_categories", :action => "create"
+
+  # READ
+  get "/cuisine_categories", :controller => "cuisine_categories", :action => "index"
+  get "/cuisine_categories/:id", :controller => "cuisine_categories", :action => "show"
+
+  # UPDATE
+  get "/cuisine_categories/:id/edit", :controller => "cuisine_categories", :action => "edit"
+  post "/update_cuisine_category/:id", :controller => "cuisine_categories", :action => "update"
+
+  # DELETE
+  get "/delete_cuisine_category/:id", :controller => "cuisine_categories", :action => "destroy"
+  #------------------------------
+
   # Routes for the Neighborhood resource:
   # CREATE
   get "/neighborhoods/new", :controller => "neighborhoods", :action => "new"
