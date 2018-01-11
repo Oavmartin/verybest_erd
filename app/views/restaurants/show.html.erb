@@ -52,7 +52,7 @@
       <% @restaurant.bookmarks.each do |bookmark| %>
         <li class="list-group-item">
           <a href="/bookmarks/<%= bookmark.id %>">
-            <%= bookmark.user_id %>
+            <%= bookmark.restaurant_id %>
           </a>
           <div class="btn-group btn-group-xs pull-right">
             <a href="/bookmarks/<%= bookmark.id %>" class="btn btn-primary">
