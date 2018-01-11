@@ -48,8 +48,6 @@ class BookmarksController < ApplicationController
 
   def update
     @bookmark = Bookmark.find(params[:id])
-
-    @bookmark.user_id = params[:user_id]
     @bookmark.dish_id = params[:dish_id]
     @bookmark.restaurant_id = params[:restaurant_id]
 
